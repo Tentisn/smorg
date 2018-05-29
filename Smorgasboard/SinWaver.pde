@@ -16,7 +16,7 @@ class SinWaver {
   void calcWave() {
     w = width+16;
     dx = (TWO_PI / period) * xspacing;
-    yvalues = new float[w/(int)xspacing];
+    yvalues = new float[8*w/(int)(xspacing+30)];
     // Increment theta (try different values for 'angular velocity' here
     theta += 0.02;
 
@@ -29,6 +29,8 @@ class SinWaver {
   }
 
   void renderWave() {
+    text("Click and drag for Satisfaction",5,15);
+    
     noStroke();
     fill((int)((double)mouseX/width*255), (int)((double)mouseY/height*255), 255-(int)((double)mouseX/width*255));
     // A simple way to draw the wave with an ellipse at each location
