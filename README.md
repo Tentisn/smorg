@@ -8,7 +8,7 @@
 The toughest part was converting the original processing code into our own. The process was not as simple as copy and pasting into processing. We had to convert the code, which was in a runner form, into an object that could be put on our board. On top of that, making the Simon board was all us and getting the buttons to respond was a pain.
 
 ### Most interesting piece of your code and explanation for what it does.
-
+```Java
 void renderWave() {
     noStroke();
     fill((int)((double)mouseX/width*255), (int)((double)mouseY/height*255), 255-(int)((double)mouseX/width*255));
