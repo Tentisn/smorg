@@ -30,6 +30,7 @@ class Button {
     } else if (mousePressed &&mouseX>365&&mouseX<715 && mouseY>365&&mouseY<715) {
       square4();
     }
+    text("PRESS KEYBOARD FOR SATISFACTION: \n1-2D SPINNER...2-BUTTONS...3-SIN WAVE...4-TICKLER",30,25);
   } 
 
   void square1() {

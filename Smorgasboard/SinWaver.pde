@@ -29,7 +29,8 @@ class SinWaver {
   }
 
   void renderWave() {
-    text("Click and drag for Satisfaction",5,15);
+    text("Click and drag for Satisfaction",5,20);
+     text("PRESS KEYBOARD FOR SATISFACTION: \n1-2D SPINNER...2-BUTTONS...3-SIN WAVE...4-TICKLER",5,45);
     
     noStroke();
     fill((int)((double)mouseX/width*255), (int)((double)mouseY/height*255), 255-(int)((double)mouseX/width*255));
