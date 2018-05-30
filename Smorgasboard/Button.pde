@@ -1,11 +1,12 @@
 class Button {
+SoundFile noise;
 
-
-  Button() {
+  Button(SoundFile x) {
 
     //background(102);
+    
+    noise = x;
 
-   
   }
 
   void display() {
@@ -23,6 +24,7 @@ class Button {
 
     if (mousePressed && mouseX<355 && mouseY<355 ) {
       square1();
+      
     } else if (mousePressed &&mouseX>360 && mouseY<355 ) {
       square2();
     } else if (mousePressed &&mouseX>5 && mouseY>365 && mouseX<365 ) {
@@ -30,7 +32,6 @@ class Button {
     } else if (mousePressed &&mouseX>365&&mouseX<715 && mouseY>365&&mouseY<715) {
       square4();
     }
-    text("PRESS KEYBOARD FOR SATISFACTION: \n1-2D SPINNER...2-BUTTONS...3-SIN WAVE...4-TICKLER",30,25);
   } 
 
   void square1() {
@@ -38,6 +39,8 @@ class Button {
     fill(190, 190, 0);
     rect (5, 5, 350, 350);
     println("yello");
+    noise.rate(.5);
+    noise.play();
   }
 
   void square2() {
@@ -61,3 +64,17 @@ class Button {
     rect(365, 365, 350, 350);
   }
 }
+
+  void square3() {
+    cursor(HAND);
+    fill (0, 200, 0);
+    rect(5, 365, 350, 350);
+    println("grn");
+  }
+
+  void square4() {
+    cursor(HAND);
+    println("blu");
+    fill (0, 0, 200);
+    rect(365, 365, 350, 350);
+  }

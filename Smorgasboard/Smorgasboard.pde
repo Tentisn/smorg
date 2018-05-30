@@ -1,4 +1,6 @@
-
+import processing.sound.*;
+SoundFile tim;
+SoundFile laugh;
 Tickle t;
 Button b;
 Rotater r=new Rotater();
@@ -6,15 +8,18 @@ SinWaver w=new SinWaver();
 int scene=1;
 void setup() {
   size(720, 720); 
-  b=new Button();
-  t=new Tickle();
+  tim = new SoundFile(this, "timAllen.mp3");
+  b=new Button(tim);
+  
+  laugh=new SoundFile(this, "Kid_Laugh-Mike_Koenig-1673908713.mp3");
+  t=new Tickle(laugh);
+  //tim.play();
+
 }
 
 void draw() {
   background(51); 
   fill(255, 204);
-  
-
   if (scene==1) {
     r.squareRotate();
   } else if (scene==2) {
@@ -38,10 +43,9 @@ void keyTyped() {
   else if ((key=='3')) {
     scene=3;
   } 
-  else if ((key=='4')) {
+    else if ((key=='4')) {
     scene=4;
   } 
-}
-
+  }
 
 //https://github.com/APCS2017-2018/Tentis.N/tree/processing
