@@ -1,5 +1,8 @@
 import processing.sound.*;
 SoundFile tim;
+SoundFile hat;
+SoundFile kick;
+SoundFile snare;
 SoundFile laugh;
 Tickle t;
 Button b;
@@ -9,7 +12,10 @@ int scene=1;
 void setup() {
   size(720, 720); 
   tim = new SoundFile(this, "timAllen.mp3");
-  b=new Button(tim);
+  hat = new SoundFile(this, "hiHat.wav");
+  kick = new SoundFile(this, "bassDrum.wav");
+  snare = new SoundFile(this, "snareDrum.wav");
+  b=new Button(tim,hat,kick,snare);
   
   laugh=new SoundFile(this, "Kid_Laugh-Mike_Koenig-1673908713.mp3");
   t=new Tickle(laugh);
