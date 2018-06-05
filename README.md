@@ -46,3 +46,6 @@ https://processing.org/examples/mouse2d.html
 
 Sin Wave:
 https://processing.org/examples/sinewave.html
+
+Tickle:
+https://processing.org/examples/tickle.html
